@@ -20,6 +20,7 @@ const defaultPrefs: UserPreferences = {
   include_claude: true,
   include_codex: false,
   include_opencode: false,
+  include_pi: false,
   theme: "github",
   color_mode: "system",
   language: "en",

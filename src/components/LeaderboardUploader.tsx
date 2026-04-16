@@ -28,6 +28,7 @@ export function LeaderboardUploader() {
   const { stats: claudeStats } = useTokenStats("claude");
   const { stats: codexStats } = useTokenStats("codex");
   const { stats: opencodeStats } = useTokenStats("opencode");
+  const { stats: piStats } = useTokenStats("pi");
 
   const claude = useSnapshotUploader({
     stats: prefs.include_claude ? claudeStats : null,
@@ -47,23 +48,33 @@ export function LeaderboardUploader() {
     optedIn,
     provider: "opencode",
   });
+  const pi = useSnapshotUploader({
+    stats: prefs.include_pi ? piStats : null,
+    user,
+    optedIn,
+    provider: "pi",
+  });
 
   const runners = useMemo<Partial<Record<LeaderboardProvider, BackfillRunner>>>(
     () => ({
       claude: prefs.include_claude && claude.ready ? claude.manualBackfill : undefined,
       codex: prefs.include_codex && codex.ready ? codex.manualBackfill : undefined,
       opencode: prefs.include_opencode && opencode.ready ? opencode.manualBackfill : undefined,
+      pi: prefs.include_pi && pi.ready ? pi.manualBackfill : undefined,
     }),
     [
       prefs.include_claude,
       prefs.include_codex,
       prefs.include_opencode,
+      prefs.include_pi,
       claude.ready,
       codex.ready,
       opencode.ready,
+      pi.ready,
       claude.manualBackfill,
       codex.manualBackfill,
       opencode.manualBackfill,
+      pi.manualBackfill,
     ],
   );
 

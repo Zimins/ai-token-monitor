@@ -153,6 +153,7 @@ function LeaderboardContent({ user }: { user: User }) {
   if (prefs.include_claude) availableProviders.push("claude");
   if (prefs.include_codex) availableProviders.push("codex");
   if (prefs.include_opencode) availableProviders.push("opencode");
+  if (prefs.include_pi) availableProviders.push("pi");
   // Default to claude if nothing enabled
   if (availableProviders.length === 0) availableProviders.push("claude");
 

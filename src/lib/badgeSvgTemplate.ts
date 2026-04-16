@@ -14,12 +14,14 @@ export const PROVIDER_COLORS: Record<LeaderboardProvider, string> = {
   claude: "#7C5CFC",
   codex: "#0ea5e9",
   opencode: "#d97706",
+  pi: "#10b981",
 };
 
 export const PROVIDER_LABELS: Record<LeaderboardProvider, string> = {
   claude: "Claude",
   codex: "Codex",
   opencode: "OpenCode",
+  pi: "Pi",
 };
 
 export const PERIOD_LABELS: Record<string, string> = {

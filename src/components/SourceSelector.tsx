@@ -8,6 +8,7 @@ export function SourceSelector() {
   const t = useI18n();
   const [codexAvailable, setCodexAvailable] = useState(false);
   const [opencodeAvailable, setOpencodeAvailable] = useState(false);
+  const [piAvailable, setPiAvailable] = useState(false);
 
   useEffect(() => {
     invoke<boolean>("is_codex_available")
@@ -16,18 +17,30 @@ export function SourceSelector() {
     invoke<boolean>("is_opencode_available")
       .then(setOpencodeAvailable)
       .catch(() => setOpencodeAvailable(false));
+    invoke<boolean>("is_pi_available")
+      .then(setPiAvailable)
+      .catch(() => setPiAvailable(false));
   }, []);
 
   // Hide entirely if no additional sources are available
-  if (!codexAvailable && !opencodeAvailable) return null;
+  if (!codexAvailable && !opencodeAvailable && !piAvailable) return null;
 
-  const toggleSource = (key: "include_claude" | "include_codex" | "include_opencode") => {
+  const toggleSource = (key: "include_claude" | "include_codex" | "include_opencode" | "include_pi") => {
     const nextValue = !prefs[key];
-    const activeCount = Number(prefs.include_claude) + Number(prefs.include_codex) + Number(prefs.include_opencode);
+    const activeCount =
+      Number(prefs.include_claude) +
+      Number(prefs.include_codex) +
+      Number(prefs.include_opencode) +
+      Number(prefs.include_pi);
     // Must keep at least one source active
     if (!nextValue && activeCount === 1) return;
     updatePrefs({ [key]: nextValue });
   };
+
+  const onlyClaudeActive = !prefs.include_codex && !prefs.include_opencode && !prefs.include_pi;
+  const onlyCodexActive = !prefs.include_claude && !prefs.include_opencode && !prefs.include_pi;
+  const onlyOpencodeActive = !prefs.include_claude && !prefs.include_codex && !prefs.include_pi;
+  const onlyPiActive = !prefs.include_claude && !prefs.include_codex && !prefs.include_opencode;
 
   return (
     <div style={{
@@ -47,18 +60,18 @@ export function SourceSelector() {
         {t("sources.title")}
       </div>
 
-      <div style={{ display: "flex", gap: 8 }}>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         <SourceToggle
           label={t("sources.claude")}
           checked={prefs.include_claude}
-          locked={!prefs.include_codex && !prefs.include_opencode}
+          locked={onlyClaudeActive}
           onClick={() => toggleSource("include_claude")}
         />
         {codexAvailable && (
           <SourceToggle
             label={t("sources.codex")}
             checked={prefs.include_codex}
-            locked={!prefs.include_claude && !prefs.include_opencode}
+            locked={onlyCodexActive}
             onClick={() => toggleSource("include_codex")}
           />
         )}
@@ -66,8 +79,16 @@ export function SourceSelector() {
           <SourceToggle
             label={t("sources.opencode")}
             checked={prefs.include_opencode}
-            locked={!prefs.include_claude && !prefs.include_codex}
+            locked={onlyOpencodeActive}
             onClick={() => toggleSource("include_opencode")}
+          />
+        )}
+        {piAvailable && (
+          <SourceToggle
+            label={t("sources.pi")}
+            checked={prefs.include_pi}
+            locked={onlyPiActive}
+            onClick={() => toggleSource("include_pi")}
           />
         )}
       </div>

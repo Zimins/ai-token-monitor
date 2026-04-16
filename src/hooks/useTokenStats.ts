@@ -3,7 +3,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 import type { AllStats } from "../lib/types";
 
-export type StatsProvider = "claude" | "codex" | "opencode";
+export type StatsProvider = "claude" | "codex" | "opencode" | "pi";
 
 export function useTokenStats(provider: StatsProvider = "claude") {
   const [stats, setStats] = useState<AllStats | null>(null);
@@ -15,7 +15,14 @@ export function useTokenStats(provider: StatsProvider = "claude") {
   const fetchStats = useCallback(async () => {
     const requestId = ++requestIdRef.current;
     try {
-      const command = provider === "codex" ? "get_codex_stats" : provider === "opencode" ? "get_opencode_stats" : "get_all_stats";
+      const command =
+        provider === "codex"
+          ? "get_codex_stats"
+          : provider === "opencode"
+          ? "get_opencode_stats"
+          : provider === "pi"
+          ? "get_pi_stats"
+          : "get_all_stats";
       const data = await invoke<AllStats>(command);
       if (requestId !== requestIdRef.current) return;
       setStats(data);
