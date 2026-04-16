@@ -282,7 +282,15 @@ pub fn update_tray_title(app_handle: &tauri::AppHandle) {
             0.0
         };
 
-        let today_cost = claude_cost + codex_cost + opencode_cost;
+        let pi_cost = if prefs.include_pi {
+            providers::pi::get_cached_stats()
+                .and_then(|s| s.daily.iter().find(|d| d.date == today).map(|d| d.cost_usd))
+                .unwrap_or(0.0)
+        } else {
+            0.0
+        };
+
+        let today_cost = claude_cost + codex_cost + opencode_cost + pi_cost;
         let cost_str = if today_cost >= 1.0 {
             format!("${:.0}", today_cost)
         } else {
@@ -332,6 +340,12 @@ fn get_all_watch_dirs() -> Vec<PathBuf> {
     let opencode_provider = providers::opencode::OpenCodeProvider::new();
     if opencode_provider.is_available() {
         dirs.push(opencode_provider.data_dir.clone());
+    }
+
+    // Add Pi agent sessions directory
+    let pi_provider = providers::pi::PiProvider::new();
+    if pi_provider.is_available() {
+        dirs.push(pi_provider.data_dir.clone());
     }
 
     dirs
@@ -401,6 +415,7 @@ fn start_file_watcher(app_handle: tauri::AppHandle) {
                     providers::claude_code::invalidate_stats_cache();
                     providers::codex::invalidate_stats_cache();
                     providers::opencode::invalidate_stats_cache();
+                    providers::pi::invalidate_stats_cache();
                     let _ = app_handle.emit("stats-updated", ());
                     // Re-parse in background so the tray reflects new data even when the
                     // popup is closed (get_all_stats is only called by the frontend).
@@ -414,6 +429,9 @@ fn start_file_watcher(app_handle: tauri::AppHandle) {
                         }
                         if prefs.include_opencode {
                             let _ = providers::opencode::OpenCodeProvider::new().fetch_stats();
+                        }
+                        if prefs.include_pi {
+                            let _ = providers::pi::PiProvider::new().fetch_stats();
                         }
                         update_tray_title(&app_for_refresh);
                     });
@@ -435,6 +453,7 @@ fn start_file_watcher(app_handle: tauri::AppHandle) {
                         providers::claude_code::invalidate_stats_cache();
                         providers::codex::invalidate_stats_cache();
                         providers::opencode::invalidate_stats_cache();
+                        providers::pi::invalidate_stats_cache();
                         let _ = app_handle.emit("stats-updated", ());
                     }
                     update_tray_title(&app_handle);
@@ -780,6 +799,8 @@ pub fn run() {
             commands::is_codex_available,
             commands::get_opencode_stats,
             commands::is_opencode_available,
+            commands::get_pi_stats,
+            commands::is_pi_available,
             commands::get_preferences,
             commands::set_preferences,
             commands::get_stable_device_id,
