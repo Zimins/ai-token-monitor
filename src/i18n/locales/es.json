@@ -4,15 +4,18 @@
   "app.loading": "Cargando...",
   "app.error.title": "No se encontraron estadísticas",
   "app.error.description": "Asegúrate de que Claude Code, Codex u OpenCode esté instalado y se haya utilizado al menos una vez.",
+
   "tab.overview": "Resumen",
   "tab.analytics": "Análisis",
   "tab.leaderboard": "Clasificación",
   "tab.chat": "Chat",
+
   "sources.title": "Fuentes",
   "sources.claude": "Claude",
   "sources.codex": "Codex",
   "sources.opencode": "OpenCode",
   "sources.pi": "Pi",
+
   "today.title": "Hoy",
   "today.tokens": "tokens",
   "today.vs7d": "vs prom. 7d",
@@ -26,6 +29,7 @@
   "today.costTooltipOut": "Salida",
   "today.costTooltipCacheR": "Caché L",
   "today.costTooltipCacheW": "Caché E",
+
   "daily.title": "Diario ({{days}}d)",
   "daily.tokens": "Tokens",
   "daily.cost": "Costo",
@@ -33,11 +37,13 @@
   "daily.list": "Lista",
   "daily.copy": "Copiar",
   "daily.copied": "¡Copiado!",
+
   "period.thisWeek": "Esta semana",
   "period.lastWeek": "Semana pasada",
   "period.thisMonth": "Este mes",
   "period.lastMonth": "Mes pasado",
   "period.sessions": "sesiones",
+
   "activity.title": "Actividad",
   "activity.weeks": "Actividad ({{weeks}} sem.)",
   "activity.less": "Menos",
@@ -51,14 +57,17 @@
   "activity.longest": "Más larga",
   "activity.current": "Actual",
   "activity.days": "días",
+
   "day.mon": "Lun",
   "day.wed": "Mié",
   "day.fri": "Vie",
   "day.sun": "Dom",
+
   "model.title": "Uso de modelos",
   "model.input": "Entrada",
   "model.output": "Salida",
   "model.cache": "Caché",
+
   "cache.title": "Eficiencia de caché",
   "cache.cached": "en caché",
   "cache.read": "Lectura caché",
@@ -68,6 +77,7 @@
   "cache.tooltipDesc": "Proporción de tokens de entrada obtenidos del caché en lugar de ser reenviados.",
   "cache.tooltipGood": "% alto = bueno: reutilizar caché ahorra costos (lectura de caché es 90% más barata que entrada).",
   "cache.tooltipFormula": "Tasa de acierto = cache_read / (input + cache_read)",
+
   "leaderboard.comingSoon": "Clasificación próximamente",
   "leaderboard.notConfigured": "El servicio de clasificación aún no está configurado.",
   "leaderboard.join": "Únete a la clasificación",
@@ -88,6 +98,7 @@
   "leaderboard.new": "NEW",
   "leaderboard.you": "(tú)",
   "leaderboard.msgs": "msgs",
+
   "header.menu": "Más",
   "header.share": "Compartir esta app",
   "header.github": "Ver repositorio de GitHub",
@@ -100,6 +111,7 @@
   "header.captureFailed": "Error al capturar",
   "header.summaryCopied": "¡Resumen copiado!",
   "header.quickActions": "Acceso rápido",
+
   "settings.title": "Configuración",
   "settings.tab.general": "General",
   "settings.tab.account": "Cuenta",
@@ -132,7 +144,9 @@
   "settings.codexConfigDirs": "Directorios de Codex",
   "settings.codexConfigDirsTooltip": "Directorios donde Codex almacena datos de sesión. Agrega múltiples directorios para consolidar el uso de diferentes configuraciones.",
   "settings.codexConfigDirsInvalid": "Ruta inválida o carpeta sessions no encontrada",
+
   "support.buyMeCoffee": "Invítame un café",
+
   "wrapped.title": "Mi informe de IA",
   "wrapped.month": "Este mes",
   "wrapped.year": "Este año",
@@ -154,6 +168,7 @@
   "wrapped.summaryCache": "Caché",
   "wrapped.share": "Compartir",
   "wrapped.copied": "¡Copiado!",
+
   "receipt.title": "Recibo",
   "receipt.subtotal": "SUBTOTAL",
   "receipt.cacheDiscount": "DESCUENTO CACHÉ",
@@ -169,6 +184,7 @@
   "receipt.thisWeek": "Esta semana",
   "receipt.thisMonth": "Este mes",
   "receipt.allTime": "Todo",
+
   "salary.title": "Comparación salarial",
   "salary.setup": "Configura tu salario para ver comparaciones",
   "salary.setupButton": "Configurar",
@@ -178,7 +194,9 @@
   "salary.coffee": "Lattes",
   "salary.netflix": "Netflix",
   "salary.chicken": "Pollos",
+
   "settings.monthlySalary": "Salario mensual",
+
   "export.title": "Resumen AI Token Monitor",
   "export.date": "Fecha",
   "export.today": "Hoy",
@@ -191,6 +209,7 @@
   "export.totalSessions": "Total sesiones",
   "export.totalMessages": "Total mensajes",
   "export.models": "Modelos",
+
   "update.available": "v{{version}} disponible",
   "update.download": "Actualizar",
   "update.downloading": "Descargando... {{progress}}%",
@@ -198,8 +217,10 @@
   "update.restartBtn": "Reiniciar",
   "update.error": "Error de actualización",
   "update.restartManual": "Reinicie manualmente",
+
   "settings.usageAlerts": "Alertas de uso",
   "settings.usageTracking": "Seguimiento de uso",
+
   "usageAlert.title": "Uso",
   "usageAlert.session": "Sesión (5h)",
   "usageAlert.weekly": "Semanal",
@@ -207,10 +228,12 @@
   "usageAlert.stale": "Actualizando...",
   "usageAlert.resetsIn": "Se reinicia en {{time}}",
   "usageAlert.resetsNow": "Reiniciando...",
+
   "usageTracking.title": "Seguimiento de uso de Claude",
   "usageTracking.description": "Monitorea tus límites de sesión y semanales de Claude Code en tiempo real. Requiere acceso a tus credenciales de inicio de sesión de Claude Code.",
   "usageTracking.enable": "Activar",
   "usageTracking.enabling": "Activando...",
+
   "chat.join": "Unirse al chat",
   "chat.description": "Chatea con otros desarrolladores de la clasificación. Inicia sesión y activa la clasificación para participar.",
   "chat.placeholder": "Escribe un mensaje...",
@@ -253,6 +276,7 @@
   "settings.aiKeySecure": "Las claves API se cifran y almacenan de forma segura en su dispositivo",
   "settings.aiKeyPlaceholder": "Introduce la clave API",
   "settings.aiNoKeys": "Añade al menos una clave API para activar la traducción",
+
   "settings.tab.webhooks": "Webhooks",
   "settings.webhookTitle": "Notificaciones Webhook",
   "settings.webhookDescription": "Recibe alertas a través de Discord, Slack o Telegram cuando el uso se acerque a los umbrales o se reinicie.",
@@ -265,12 +289,14 @@
   "settings.webhookGuideDiscord": "Ajustes del servidor > Integraciones > Webhooks > Nuevo Webhook > Copiar URL",
   "settings.webhookGuideSlack": "Aplicaciones > Incoming Webhooks > Añadir a Slack > Copiar URL del Webhook",
   "settings.webhookGuideTelegram": "Enviar /newbot a @BotFather > Copiar el token, añadir el bot al grupo y obtener el Chat ID a través de la API /getUpdates",
+
   "miniProfile.viewGithub": "Ver perfil de GitHub",
   "miniProfile.noActivity": "Sin actividad reciente",
   "miniProfile.loadError": "No se pudieron cargar los datos de actividad",
   "miniProfile.streakTooltip": "Días consecutivos de actividad",
   "miniProfile.addLink": "Añadir enlace",
   "miniProfile.add": "Añadir",
+
   "badge.title": "Mi insignia",
   "badge.leaderboard": "Clasificación",
   "badge.card": "Tarjeta",
@@ -288,6 +314,7 @@
   "badge.saved": "¡Guardado!",
   "badge.urlSection": "URL de insignia dinámica",
   "badge.urlDesc": "Inserta en tu GitHub README",
+
   "analytics.subtab.usage": "Uso",
   "analytics.subtab.projects": "Proyectos",
   "analytics.subtab.tools": "Herramientas",

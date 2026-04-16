@@ -4,15 +4,18 @@
   "app.loading": "Laden...",
   "app.error.title": "Keine Statistiken gefunden",
   "app.error.description": "Stellen Sie sicher, dass Claude Code, Codex oder OpenCode installiert ist und mindestens einmal verwendet wurde.",
+
   "tab.overview": "Übersicht",
   "tab.analytics": "Analyse",
   "tab.leaderboard": "Rangliste",
   "tab.chat": "Chat",
+
   "sources.title": "Quellen",
   "sources.claude": "Claude",
   "sources.codex": "Codex",
   "sources.opencode": "OpenCode",
   "sources.pi": "Pi",
+
   "today.title": "Heute",
   "today.tokens": "Token",
   "today.vs7d": "vs 7T-Durchschn.",
@@ -26,6 +29,7 @@
   "today.costTooltipOut": "Ausgabe",
   "today.costTooltipCacheR": "Cache L",
   "today.costTooltipCacheW": "Cache S",
+
   "daily.title": "Täglich ({{days}}T)",
   "daily.tokens": "Token",
   "daily.cost": "Kosten",
@@ -33,11 +37,13 @@
   "daily.list": "Liste",
   "daily.copy": "Kopieren",
   "daily.copied": "Kopiert!",
+
   "period.thisWeek": "Diese Woche",
   "period.lastWeek": "Letzte Woche",
   "period.thisMonth": "Dieser Monat",
   "period.lastMonth": "Letzter Monat",
   "period.sessions": "Sitzungen",
+
   "activity.title": "Aktivität",
   "activity.weeks": "Aktivität ({{weeks}} Wo.)",
   "activity.less": "Weniger",
@@ -51,14 +57,17 @@
   "activity.longest": "Längste",
   "activity.current": "Aktuell",
   "activity.days": "Tage",
+
   "day.mon": "Mo",
   "day.wed": "Mi",
   "day.fri": "Fr",
   "day.sun": "So",
+
   "model.title": "Modellnutzung",
   "model.input": "Eingabe",
   "model.output": "Ausgabe",
   "model.cache": "Cache",
+
   "cache.title": "Cache-Effizienz",
   "cache.cached": "gecacht",
   "cache.read": "Cache-Lesen",
@@ -68,6 +77,7 @@
   "cache.tooltipDesc": "Anteil der Eingabe-Token, die aus dem Cache stammen statt erneut gesendet zu werden.",
   "cache.tooltipGood": "Hoher % = gut: Cache-Wiederverwendung spart Kosten (Cache-Lesen ist 90% günstiger als Eingabe).",
   "cache.tooltipFormula": "Trefferquote = cache_read / (input + cache_read)",
+
   "leaderboard.comingSoon": "Rangliste kommt bald",
   "leaderboard.notConfigured": "Der Ranglisten-Service ist noch nicht konfiguriert.",
   "leaderboard.join": "Rangliste beitreten",
@@ -88,6 +98,7 @@
   "leaderboard.new": "NEW",
   "leaderboard.you": "(Sie)",
   "leaderboard.msgs": "Nachr.",
+
   "header.menu": "Mehr",
   "header.share": "App teilen",
   "header.github": "GitHub-Repository anzeigen",
@@ -100,6 +111,7 @@
   "header.captureFailed": "Erfassung fehlgeschlagen",
   "header.summaryCopied": "Zusammenfassung kopiert!",
   "header.quickActions": "Schnellzugriff",
+
   "settings.title": "Einstellungen",
   "settings.tab.general": "Allgemein",
   "settings.tab.account": "Konto",
@@ -132,7 +144,9 @@
   "settings.codexConfigDirs": "Codex-Verzeichnisse",
   "settings.codexConfigDirsTooltip": "Verzeichnisse, in denen Codex Sitzungsdaten speichert. Fügen Sie mehrere Verzeichnisse hinzu, um die Nutzung verschiedener Konfigurationen zusammenzufassen.",
   "settings.codexConfigDirsInvalid": "Ungültiger Pfad oder sessions-Ordner fehlt",
+
   "support.buyMeCoffee": "Kaffee spendieren",
+
   "wrapped.title": "Mein KI-Bericht",
   "wrapped.month": "Diesen Monat",
   "wrapped.year": "Dieses Jahr",
@@ -154,6 +168,7 @@
   "wrapped.summaryCache": "Cache",
   "wrapped.share": "Teilen",
   "wrapped.copied": "Kopiert!",
+
   "receipt.title": "Quittung",
   "receipt.subtotal": "ZWISCHENSUMME",
   "receipt.cacheDiscount": "CACHE-RABATT",
@@ -169,6 +184,7 @@
   "receipt.thisWeek": "Diese Woche",
   "receipt.thisMonth": "Diesen Monat",
   "receipt.allTime": "Gesamt",
+
   "salary.title": "Gehaltsvergleich",
   "salary.setup": "Gehalt eingeben für Vergleiche",
   "salary.setupButton": "Einrichten",
@@ -178,7 +194,9 @@
   "salary.coffee": "Lattes",
   "salary.netflix": "Netflix",
   "salary.chicken": "Hähnchen",
+
   "settings.monthlySalary": "Monatsgehalt",
+
   "export.title": "AI Token Monitor Zusammenfassung",
   "export.date": "Datum",
   "export.today": "Heute",
@@ -191,6 +209,7 @@
   "export.totalSessions": "Gesamt-Sitzungen",
   "export.totalMessages": "Gesamt-Nachrichten",
   "export.models": "Modelle",
+
   "update.available": "v{{version}} verfügbar",
   "update.download": "Aktualisieren",
   "update.downloading": "Herunterladen... {{progress}}%",
@@ -198,8 +217,10 @@
   "update.restartBtn": "Neustarten",
   "update.error": "Update fehlgeschlagen",
   "update.restartManual": "Bitte manuell neu starten",
+
   "settings.usageAlerts": "Nutzungswarnungen",
   "settings.usageTracking": "Nutzungsverfolgung",
+
   "usageAlert.title": "Nutzung",
   "usageAlert.session": "Sitzung (5h)",
   "usageAlert.weekly": "Wöchentlich",
@@ -207,10 +228,12 @@
   "usageAlert.stale": "Aktualisierung...",
   "usageAlert.resetsIn": "Zurücksetzen in {{time}}",
   "usageAlert.resetsNow": "Wird zurückgesetzt...",
+
   "usageTracking.title": "Claude Nutzungsverfolgung",
   "usageTracking.description": "Überwachen Sie Ihre Claude Code Sitzungs- und Wochenlimits in Echtzeit. Dies erfordert Zugriff auf Ihre Claude Code Anmeldedaten.",
   "usageTracking.enable": "Aktivieren",
   "usageTracking.enabling": "Wird aktiviert...",
+
   "chat.join": "Chat beitreten",
   "chat.description": "Chatten Sie mit anderen Entwicklern in der Rangliste. Melden Sie sich an und aktivieren Sie die Rangliste, um teilzunehmen.",
   "chat.placeholder": "Nachricht eingeben...",
@@ -253,6 +276,7 @@
   "settings.aiKeySecure": "API-Schlüssel werden verschlüsselt und sicher auf Ihrem Gerät gespeichert",
   "settings.aiKeyPlaceholder": "API-Schlüssel eingeben",
   "settings.aiNoKeys": "Fügen Sie mindestens einen API-Schlüssel hinzu, um die Übersetzung zu aktivieren",
+
   "settings.tab.webhooks": "Webhooks",
   "settings.webhookTitle": "Webhook-Benachrichtigungen",
   "settings.webhookDescription": "Erhalten Sie Benachrichtigungen über Discord, Slack oder Telegram, wenn die Nutzungslimits sich Schwellenwerten nähern oder zurückgesetzt werden.",
@@ -265,12 +289,14 @@
   "settings.webhookGuideDiscord": "Servereinstellungen > Integrationen > Webhooks > Neuer Webhook > URL kopieren",
   "settings.webhookGuideSlack": "Apps > Incoming Webhooks > Zu Slack hinzufügen > Webhook-URL kopieren",
   "settings.webhookGuideTelegram": "/newbot an @BotFather senden > Token kopieren, Bot zur Gruppe hinzufügen und Chat ID über die /getUpdates API abrufen",
+
   "miniProfile.viewGithub": "GitHub-Profil anzeigen",
   "miniProfile.noActivity": "Keine aktuelle Aktivität",
   "miniProfile.loadError": "Aktivitätsdaten konnten nicht geladen werden",
   "miniProfile.streakTooltip": "Aufeinanderfolgende Tage mit Aktivität",
   "miniProfile.addLink": "Link hinzufügen",
   "miniProfile.add": "Hinzufügen",
+
   "badge.title": "Mein Abzeichen",
   "badge.leaderboard": "Rangliste",
   "badge.card": "Karte",
@@ -288,6 +314,7 @@
   "badge.saved": "Gespeichert!",
   "badge.urlSection": "Dynamische Abzeichen-URL",
   "badge.urlDesc": "In deine GitHub README einbetten",
+
   "analytics.subtab.usage": "Nutzung",
   "analytics.subtab.projects": "Projekte",
   "analytics.subtab.tools": "Werkzeuge",

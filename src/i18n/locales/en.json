@@ -4,15 +4,18 @@
   "app.loading": "Loading...",
   "app.error.title": "No usage stats found",
   "app.error.description": "Make sure Claude Code, Codex, or OpenCode has been used at least once.",
+
   "tab.overview": "Overview",
   "tab.analytics": "Analytics",
   "tab.leaderboard": "Leaderboard",
   "tab.chat": "Chat",
+
   "sources.title": "Sources",
   "sources.claude": "Claude",
   "sources.codex": "Codex",
   "sources.opencode": "OpenCode",
   "sources.pi": "Pi",
+
   "today.title": "Today",
   "today.tokens": "tokens",
   "today.vs7d": "vs 7d avg",
@@ -26,6 +29,7 @@
   "today.costTooltipOut": "Out",
   "today.costTooltipCacheR": "Cache R",
   "today.costTooltipCacheW": "Cache W",
+
   "daily.title": "Daily ({{days}}d)",
   "daily.tokens": "Tokens",
   "daily.cost": "Cost",
@@ -33,11 +37,13 @@
   "daily.list": "List",
   "daily.copy": "Copy",
   "daily.copied": "Copied!",
+
   "period.thisWeek": "This Week",
   "period.lastWeek": "Last Week",
   "period.thisMonth": "This Month",
   "period.lastMonth": "Last Month",
   "period.sessions": "sessions",
+
   "activity.title": "Activity",
   "activity.weeks": "Activity ({{weeks}} weeks)",
   "activity.less": "Less",
@@ -51,14 +57,17 @@
   "activity.longest": "Longest",
   "activity.current": "Current",
   "activity.days": "days",
+
   "day.mon": "Mon",
   "day.wed": "Wed",
   "day.fri": "Fri",
   "day.sun": "Sun",
+
   "model.title": "Model Usage",
   "model.input": "Input",
   "model.output": "Output",
   "model.cache": "Cache",
+
   "cache.title": "Cache Efficiency",
   "cache.cached": "cached",
   "cache.read": "Cache Read",
@@ -68,6 +77,7 @@
   "cache.tooltipDesc": "How much of your input tokens came from cache instead of being re-sent.",
   "cache.tooltipGood": "High % = good: reusing cached context saves cost (cache reads are 90% cheaper than input).",
   "cache.tooltipFormula": "Hit rate = cache_read / (input + cache_read)",
+
   "leaderboard.comingSoon": "Leaderboard Coming Soon",
   "leaderboard.notConfigured": "Leaderboard service is not configured yet.",
   "leaderboard.join": "Join the Leaderboard",
@@ -94,6 +104,7 @@
   "leaderboard.new": "NEW",
   "leaderboard.you": "(you)",
   "leaderboard.msgs": "msgs",
+
   "header.menu": "More",
   "header.share": "Share this app",
   "header.github": "View GitHub repository",
@@ -106,6 +117,7 @@
   "header.captureFailed": "Capture failed",
   "header.summaryCopied": "Summary copied!",
   "header.quickActions": "Quick Actions",
+
   "settings.title": "Settings",
   "settings.tab.general": "General",
   "settings.tab.account": "Account",
@@ -138,7 +150,9 @@
   "settings.codexConfigDirs": "Codex Directories",
   "settings.codexConfigDirsTooltip": "Directories where Codex stores session data. Add multiple directories to aggregate usage from different configurations.",
   "settings.codexConfigDirsInvalid": "Invalid path or no sessions folder found",
+
   "support.buyMeCoffee": "Buy me a coffee",
+
   "wrapped.title": "My AI Report",
   "wrapped.month": "This Month",
   "wrapped.year": "This Year",
@@ -160,6 +174,7 @@
   "wrapped.summaryCache": "Cache",
   "wrapped.share": "Share",
   "wrapped.copied": "Copied!",
+
   "receipt.title": "Receipt",
   "receipt.subtotal": "SUBTOTAL",
   "receipt.cacheDiscount": "CACHE DISCOUNT",
@@ -175,6 +190,7 @@
   "receipt.thisWeek": "This Week",
   "receipt.thisMonth": "This Month",
   "receipt.allTime": "All Time",
+
   "salary.title": "Salary Comparison",
   "salary.setup": "Set your salary to unlock comparisons",
   "salary.setupButton": "Set up",
@@ -184,7 +200,9 @@
   "salary.coffee": "Lattes",
   "salary.netflix": "Netflix",
   "salary.chicken": "Chicken",
+
   "settings.monthlySalary": "Monthly Salary",
+
   "export.title": "AI Token Monitor Summary",
   "export.date": "Date",
   "export.today": "Today",
@@ -197,6 +215,7 @@
   "export.totalSessions": "Total Sessions",
   "export.totalMessages": "Total Messages",
   "export.models": "Models",
+
   "update.available": "v{{version}} available",
   "update.download": "Update",
   "update.downloading": "Downloading... {{progress}}%",
@@ -204,8 +223,10 @@
   "update.restartBtn": "Restart",
   "update.error": "Update failed",
   "update.restartManual": "Please restart manually",
+
   "settings.usageAlerts": "Usage Alerts",
   "settings.usageTracking": "Usage Tracking",
+
   "usageAlert.title": "Usage",
   "usageAlert.session": "Session (5h)",
   "usageAlert.weekly": "Weekly",
@@ -213,10 +234,12 @@
   "usageAlert.stale": "Updating...",
   "usageAlert.resetsIn": "Resets in {{time}}",
   "usageAlert.resetsNow": "Resetting...",
+
   "usageTracking.title": "Claude Usage Tracking",
   "usageTracking.description": "Monitor your Claude Code session and weekly usage limits in real-time. This requires access to your Claude Code login credentials.",
   "usageTracking.enable": "Enable",
   "usageTracking.enabling": "Enabling...",
+
   "chat.join": "Join the Chat",
   "chat.description": "Chat with other developers on the leaderboard. Sign in and enable the leaderboard to participate.",
   "chat.placeholder": "Type a message...",
@@ -259,6 +282,7 @@
   "settings.aiKeySecure": "API keys are encrypted and stored securely on your device",
   "settings.aiKeyPlaceholder": "Enter API key",
   "settings.aiNoKeys": "Add at least one API key to enable translation",
+
   "settings.tab.webhooks": "Webhooks",
   "settings.webhookTitle": "Webhook Notifications",
   "settings.webhookDescription": "Receive alerts via Discord, Slack, or Telegram when usage limits approach thresholds or reset.",
@@ -271,12 +295,14 @@
   "settings.webhookGuideDiscord": "Server Settings > Integrations > Webhooks > New Webhook > Copy URL",
   "settings.webhookGuideSlack": "Apps > Incoming Webhooks > Add to Slack > Copy Webhook URL",
   "settings.webhookGuideTelegram": "Message @BotFather > /newbot > Copy token, then add bot to group and get Chat ID via /getUpdates API",
+
   "miniProfile.viewGithub": "View GitHub Profile",
   "miniProfile.noActivity": "No recent activity",
   "miniProfile.loadError": "Could not load activity data",
   "miniProfile.streakTooltip": "Consecutive days of activity",
   "miniProfile.addLink": "Add link",
   "miniProfile.add": "Add",
+
   "badge.title": "My Badge",
   "badge.leaderboard": "Leaderboard",
   "badge.card": "Card",
@@ -294,6 +320,7 @@
   "badge.saved": "Saved!",
   "badge.urlSection": "Dynamic Badge URL",
   "badge.urlDesc": "Embed in your GitHub README",
+
   "analytics.subtab.usage": "Usage",
   "analytics.subtab.projects": "Projects",
   "analytics.subtab.tools": "Tools",
