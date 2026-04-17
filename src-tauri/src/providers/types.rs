@@ -93,6 +93,8 @@ pub struct UserPreferences {
     pub include_codex: bool,
     #[serde(default)]
     pub include_opencode: bool,
+    #[serde(default)]
+    pub include_pi: bool,
     #[serde(default = "default_codex_dirs")]
     pub codex_dirs: Vec<String>,
     #[serde(default)]
@@ -244,6 +246,7 @@ impl Default for UserPreferences {
             include_claude: true,
             include_codex: false,
             include_opencode: false,
+            include_pi: false,
             codex_dirs: default_codex_dirs(),
             salary_enabled: false,
             monthly_salary: None,

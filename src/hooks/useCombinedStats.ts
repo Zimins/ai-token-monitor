@@ -6,36 +6,51 @@ interface UseCombinedStatsProps {
   includeClaude: boolean;
   includeCodex: boolean;
   includeOpencode: boolean;
+  includePi: boolean;
 }
 
-export function useCombinedStats({ includeClaude, includeCodex, includeOpencode }: UseCombinedStatsProps) {
+export function useCombinedStats({ includeClaude, includeCodex, includeOpencode, includePi }: UseCombinedStatsProps) {
   const claude = useTokenStats("claude");
   const codex = useTokenStats("codex");
   const opencode = useTokenStats("opencode");
+  const pi = useTokenStats("pi");
 
   const stats = useMemo<AllStats | null>(() => {
     const sources: (AllStats | null)[] = [];
     if (includeClaude) sources.push(claude.stats);
     if (includeCodex) sources.push(codex.stats);
     if (includeOpencode) sources.push(opencode.stats);
+    if (includePi) sources.push(pi.stats);
 
     const validStats = sources.filter((s): s is AllStats => s !== null);
-    if (validStats.length === 0) return includeClaude ? claude.stats : includeCodex ? codex.stats : opencode.stats;
+    if (validStats.length === 0) {
+      if (includeClaude) return claude.stats;
+      if (includeCodex) return codex.stats;
+      if (includeOpencode) return opencode.stats;
+      if (includePi) return pi.stats;
+      return null;
+    }
     if (validStats.length === 1) return validStats[0];
 
     return mergeStats(validStats);
-  }, [claude.stats, codex.stats, opencode.stats, includeClaude, includeCodex, includeOpencode]);
+  }, [claude.stats, codex.stats, opencode.stats, pi.stats, includeClaude, includeCodex, includeOpencode, includePi]);
 
-  const loading = (includeClaude && claude.loading) || (includeCodex && codex.loading) || (includeOpencode && opencode.loading);
+  const loading =
+    (includeClaude && claude.loading) ||
+    (includeCodex && codex.loading) ||
+    (includeOpencode && opencode.loading) ||
+    (includePi && pi.loading);
+
   const error = useMemo(() => {
     if (stats) return null;
 
     if (includeClaude && claude.error) return claude.error;
     if (includeCodex && codex.error) return codex.error;
     if (includeOpencode && opencode.error) return opencode.error;
+    if (includePi && pi.error) return pi.error;
 
     return null;
-  }, [stats, includeClaude, includeCodex, includeOpencode, claude.error, codex.error, opencode.error]);
+  }, [stats, includeClaude, includeCodex, includeOpencode, includePi, claude.error, codex.error, opencode.error, pi.error]);
 
   return { stats, loading, error };
 }
